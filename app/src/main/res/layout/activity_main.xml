@@ -1,18 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:background="@drawable/bg_colorful"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame"/>
+    <RadioGroup
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y65"
+        android:id="@+id/rg"
+        android:orientation="horizontal">
+        <RadioButton
+            android:textColor="@drawable/jingxuan_text"
+            android:id="@+id/jingxuan"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="精选"
+            android:gravity="center"
+            android:textSize="@dimen/y10"
+            android:button="@null"
+            android:layout_height="match_parent"
+            android:padding="@dimen/y10"
+            android:drawableTop="@drawable/jingxuan_selected"/>
+        <RadioButton
+            android:textColor="@drawable/jingxuan_text"
+            android:id="@+id/zhuanti"
+            android:gravity="center"
+            android:textSize="@dimen/y10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="专题"
+            android:button="@null"
+            android:layout_height="match_parent"
+            android:padding="@dimen/y10"
+            android:drawableTop="@drawable/zhuanti_selected"/>
+        <RadioButton
+            android:textColor="@drawable/jingxuan_text"
+            android:id="@+id/faxian"
+            android:gravity="center"
+            android:textSize="@dimen/y10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="发现"
+            android:button="@null"
+            android:layout_height="match_parent"
+            android:padding="@dimen/y10"
+            android:drawableTop="@drawable/faxian_selected"/>
+        <RadioButton
+            android:textColor="@drawable/jingxuan_text"
+            android:id="@+id/wode"
+            android:gravity="center"
+            android:textSize="@dimen/x10"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="我的"
+            android:button="@null"
+            android:layout_height="match_parent"
+            android:padding="@dimen/y10"
+            android:drawableTop="@drawable/wode_selected"/>
+    </RadioGroup>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
