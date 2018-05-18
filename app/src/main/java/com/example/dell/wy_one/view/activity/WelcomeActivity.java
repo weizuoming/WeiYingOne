@@ -8,7 +8,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.dell.wy_one.R;
-import com.example.dell.wy_one.view.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +15,18 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends BaseActivity {
 
     @BindView(R.id.img)
     ImageView img;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
-        ButterKnife.bind(this);
+    void initView() {
 
+    }
+
+    @Override
+    void initData() {
         int[]arr={1,2,3,4,5,6,7};
         int index= (int) (Math.random()*arr.length);
         int rand=arr[index];
@@ -63,5 +63,11 @@ public class WelcomeActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    @Override
+    int getLayout() {
+        return R.layout.activity_welcome;
     }
 }
