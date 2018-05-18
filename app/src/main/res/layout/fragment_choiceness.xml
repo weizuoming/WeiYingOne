@@ -11,20 +11,44 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="精选"
+                     android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:background="#44ff44"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+
+                    />
     <com.youth.banner.Banner
         android:id="@+id/choiceness_banner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y167">
 
     </com.youth.banner.Banner>
-    
-    
+            </RelativeLayout>
+      <TextView
+          android:layout_marginTop="13dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="精彩推荐"
+          android:textSize="15dp"
+          android:textColor="#ffffff"
+          android:layout_marginLeft="16dp"
+          />
     <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="30dp"
+
         android:layout_marginLeft="16dp"
         android:id="@+id/choiceness_recycler"
-        android:layout_width="@dimen/x223"
-        android:layout_height="@dimen/y100">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/y65"
+        >
 
     </android.support.v7.widget.RecyclerView>
 
