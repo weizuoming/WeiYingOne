@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dell.wy_one.R;
+import com.example.dell.wy_one.view.presenter.BasePresenter;
 
 public class SpecialFragment extends BaseFragment {
 
@@ -26,5 +27,10 @@ public class SpecialFragment extends BaseFragment {
     @Override
     void initData(@Nullable Bundle savedInstanceState) {
 
+    }
+
+    @Override
+    BasePresenter newPresenter() {
+        return null;
     }
 }

@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.dell.wy_one.R;
+import com.example.dell.wy_one.view.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
