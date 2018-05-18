@@ -11,14 +11,19 @@ import android.view.ViewGroup;
 import com.example.dell.wy_one.presenter.BasePresenter;
 import com.example.dell.wy_one.view.interfaces.BaseIView;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public abstract class BaseFragment<P extends BasePresenter> extends Fragment implements BaseIView {
     public View view;
     public P p;
+    private Unbinder bind;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = getLayout(inflater, container);
+        bind = ButterKnife.bind(this, view);
         p = newPresenter();
         p.attachView(this);
         initView(view);
@@ -37,6 +42,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
     public void onDestroy() {
         super.onDestroy();
         p.detachView();
+        bind.unbind();
     }
 
 }

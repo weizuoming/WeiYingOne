@@ -1,8 +1,10 @@
 package com.example.dell.wy_one.view.interfaces;
 
-public interface ChoicenessIView extends BaseIView {
-    void onSuccess();
+import com.example.dell.wy_one.model.bean.ChoicenessBean;
 
-    void onError();
+public interface ChoicenessIView extends BaseIView {
+    void onSuccess(ChoicenessBean choicenessBean);
+
+    void onError(Throwable throwable);
 
 }

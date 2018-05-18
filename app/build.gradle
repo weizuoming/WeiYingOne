@@ -49,4 +49,12 @@ dependencies {
     implementation 'com.squareup.okio:okio:1.11.0'
 //glide
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    //banner
+    implementation 'com.youth.banner:banner:1.4.9'
+
+    //recyclerview的依赖
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+
 }
