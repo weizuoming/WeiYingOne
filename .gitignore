@@ -6,9 +6,3 @@
 .externalNativeBuild
 /.idea/
 
-app/src/androidTest/
-app/src/main/java/com/example/dell/wy_one/model/http/HttpConfig.java
-app/src/main/java/com/example/dell/wy_one/model/interfaces/
-app/src/main/java/com/example/dell/wy_one/presenter/BasePresenter.java
-app/src/main/java/com/example/dell/wy_one/presenter/ChoicenessPresenter.java
-app/src/test/
