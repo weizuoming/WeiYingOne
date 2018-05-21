@@ -2,57 +2,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:background="#44ff44"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        android:layout_height="136pt">
                 <TextView
+                    android:id="@+id/jingxuan"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="56pt"
                     android:text="精选"
-                     android:textSize="20dp"
+                    android:textSize="32pt"
                     android:textColor="#ffffff"
-                    android:background="#44ff44"
+                    android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-
                     />
-    <com.youth.banner.Banner
-        android:id="@+id/choiceness_banner"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y167">
+    </RelativeLayout>
+             <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                 android:layout_below="@id/rela"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/smart_refresh"
+                 >
 
-    </com.youth.banner.Banner>
-            </RelativeLayout>
-      <TextView
-          android:layout_marginTop="13dp"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="精彩推荐"
-          android:textSize="15dp"
-          android:textColor="#ffffff"
-          android:layout_marginLeft="16dp"
-          />
-    <android.support.v7.widget.RecyclerView
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
 
-        android:layout_marginLeft="16dp"
-        android:id="@+id/choiceness_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/y65"
-        >
+                    <com.youth.banner.Banner
+                        android:id="@+id/choiceness_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="500pt">
 
-    </android.support.v7.widget.RecyclerView>
+                    </com.youth.banner.Banner>
 
-        </LinearLayout>
+                  <TextView
+                      android:id="@+id/tuijian"
+                      android:layout_below="@id/choiceness_banner"
+                      android:layout_marginTop="39pt"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="精彩推荐"
+                      android:textSize="25pt"
+                      android:textColor="#ffffff"
+                      android:layout_marginLeft="26pt"
+                      />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_below="@id/tuijian"
+                    android:layout_marginLeft="16pt"
+                    android:id="@+id/choiceness_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="65pt"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
     </ScrollView>
-
+     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </RelativeLayout>

@@ -2,22 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="340pt"
+        android:background="#33333333"
+        android:layout_marginLeft="16pt"
+        android:layout_marginRight="16pt"
+        android:layout_centerInParent="true"
+        android:id="@+id/choiceness_rela"
+        >
     <ImageView
-        android:layout_width="320dp"
-        android:layout_height="200dp"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="10pt"
+        android:layout_marginBottom="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="320pt"
         android:id="@+id/choiceness_image"
-        android:layout_marginLeft="6dp"
         />
+    </RelativeLayout>
+
     <TextView
+        android:layout_marginTop="30pt"
         android:id="@+id/choiceness_text"
          android:text="老无所依"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:textSize="24pt"
         android:textColor="#ffffff"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/choiceness_image"
+        android:layout_below="@id/choiceness_rela"
 
         />
 
