@@ -27,7 +27,9 @@
         <activity
             android:name=".view.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".view.activity.PlayActivity"></activity>
+        <activity android:name=".view.activity.PlayActivity" />
+        <activity android:name=".view.activity.SettingActivity" />
+        <activity android:name=".view.activity.ShareActivity"></activity>
     </application>
 
 </manifest>
