@@ -9,24 +9,20 @@ import android.webkit.WebViewClient;
 
 import com.example.dell.wy_one.R;
 
-public class PlayActivity extends AppCompatActivity {
-    private WebView webView;
+public class PlayActivity extends BaseActivity {
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
-        webView = findViewById(R.id.web_view);
-        Intent intent = getIntent();
-        String shareURL = intent.getStringExtra("shareURL");
-        if (shareURL != null) {
-            webView.loadUrl(shareURL);
+    void initView() {
 
-            //webview一系列设置
-            webView.setWebViewClient(new WebViewClient());//在当前应用打开,而不是去浏览器
-            WebSettings settings = webView.getSettings();
-            settings.setJavaScriptEnabled(true);
-            settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        }
+    }
 
+    @Override
+    void initData() {
+
+    }
+
+    @Override
+    int getLayout() {
+        return 0;
     }
 }
