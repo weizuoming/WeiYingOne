@@ -9,14 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.dell.wy_one.R;
 import com.example.dell.wy_one.model.bean.ChoicenessBean;
-import com.example.dell.wy_one.model.http.HttpConfig;
-import com.example.dell.wy_one.model.http.RetrofitUtils;
 import com.example.dell.wy_one.presenter.ChoicenessPresenter;
 import com.example.dell.wy_one.utils.GlideImageLoader;
 import com.example.dell.wy_one.view.activity.PlayActivity;
+import com.example.dell.wy_one.view.activity.SearchActivity;
 import com.example.dell.wy_one.view.adapter.ChoicenessAdapter;
 import com.example.dell.wy_one.view.interfaces.ChoicenessIView;
 import com.example.dell.wy_one.view.interfaces.OnItemListner;
@@ -28,12 +28,11 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -47,6 +46,8 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
     @BindView(R.id.smart_refresh)
     SmartRefreshLayout smart_refresh;
     Unbinder unbinder1;
+    @BindView(R.id.jingxuan_sousuo)
+    LinearLayout jingxuanSousuo;
     private ChoicenessPresenter choicenessPresenter;
     private List<ChoicenessBean.RetBean.ListBean.ChildListBean> listAll = new ArrayList<>();//装当前页面所有的数据
     private List<ChoicenessBean.RetBean.ListBean.ChildListBean> childList;
@@ -132,19 +133,19 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
         choicenessRecycler.setNestedScrollingEnabled(false);
 
 
-       choicenessAdapter.setOnItemListner(new OnItemListner() {
-           @Override
-           public void onItemClick(int position) {
-               Intent intent=new Intent(getActivity(), PlayActivity.class);
+        choicenessAdapter.setOnItemListner(new OnItemListner() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(getActivity(), PlayActivity.class);
 //               intent.putExtra("shareURL",beans.get(position).getChildList().get(position).getShareURL());
-                 startActivity(intent);
-           }
+                startActivity(intent);
+            }
 
-           @Override
-           public void onItemLongClick(int position) {
+            @Override
+            public void onItemLongClick(int position) {
 
-           }
-       });
+            }
+        });
 
 
     }
@@ -168,5 +169,11 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder1 = ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @OnClick(R.id.jingxuan_sousuo)
+    public void onViewClicked() {
+        Intent intent=new Intent(getActivity(), SearchActivity.class);
+        startActivity(intent);
     }
 }
