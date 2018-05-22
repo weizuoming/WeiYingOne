@@ -3,55 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:id="@+id/rela"
-        android:background="#44ff44"
+        android:id="@+id/line"
         android:layout_width="match_parent"
-        android:layout_height="136pt">
-                <TextView
-                    android:id="@+id/jingxuan"
-                    android:layout_width="match_parent"
-                    android:layout_height="56pt"
-                    android:text="精选"
-                    android:textSize="32pt"
-                    android:textColor="#ffffff"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    />
+        android:layout_height="135pt">
+        <TextView
+            android:id="@+id/jingxuan"
+            android:layout_width="match_parent"
+            android:layout_height="82pt"
+            android:textSize="32pt"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            />
     </RelativeLayout>
-             <com.scwang.smartrefresh.layout.SmartRefreshLayout
-                 android:layout_below="@id/rela"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:id="@+id/smart_refresh"
-                 >
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/smart_refresh">
 
-                <ScrollView
+        <com.example.dell.wy_one.view.custom.ObservableScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/choiceness_banner"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
+                    android:layout_height="350pt">
 
-                    <com.youth.banner.Banner
-                        android:id="@+id/choiceness_banner"
-                        android:layout_width="match_parent"
-                        android:layout_height="500pt">
+                </com.youth.banner.Banner>
 
-                    </com.youth.banner.Banner>
-
-                  <TextView
-                      android:id="@+id/tuijian"
-                      android:layout_below="@id/choiceness_banner"
-                      android:layout_marginTop="39pt"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="精彩推荐"
-                      android:textSize="25pt"
-                      android:textColor="#ffffff"
-                      android:layout_marginLeft="26pt"
-                      />
+                <TextView
+                    android:id="@+id/tuijian"
+                    android:layout_below="@id/choiceness_banner"
+                    android:layout_marginTop="39pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="精彩推荐"
+                    android:textSize="25pt"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="26pt"
+                    />
                 <android.support.v7.widget.RecyclerView
                     android:layout_below="@id/tuijian"
                     android:layout_marginLeft="16pt"
@@ -63,7 +57,8 @@
 
                 </android.support.v7.widget.RecyclerView>
 
-        </RelativeLayout>
-    </ScrollView>
-     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </RelativeLayout>
+        </com.example.dell.wy_one.view.custom.ObservableScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </RelativeLayout>

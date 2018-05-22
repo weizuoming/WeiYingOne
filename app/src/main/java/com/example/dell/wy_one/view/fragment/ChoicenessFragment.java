@@ -1,6 +1,7 @@
 package com.example.dell.wy_one.view.fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,15 +10,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.dell.wy_one.R;
 import com.example.dell.wy_one.model.bean.ChoicenessBean;
-import com.example.dell.wy_one.model.http.HttpConfig;
-import com.example.dell.wy_one.model.http.RetrofitUtils;
 import com.example.dell.wy_one.presenter.ChoicenessPresenter;
 import com.example.dell.wy_one.utils.GlideImageLoader;
 import com.example.dell.wy_one.view.activity.PlayActivity;
 import com.example.dell.wy_one.view.adapter.ChoicenessAdapter;
+import com.example.dell.wy_one.view.custom.ObservableScrollView;
 import com.example.dell.wy_one.view.interfaces.ChoicenessIView;
 import com.example.dell.wy_one.view.interfaces.OnItemListner;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -28,9 +30,7 @@ import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +38,15 @@ import butterknife.Unbinder;
 
 
 public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implements ChoicenessIView {
+
+    @BindView(R.id.line)
+    RelativeLayout line;
+    @BindView(R.id.scrollView)
+    ObservableScrollView scrollView;
+    @BindView(R.id.jingxuan)
+    TextView jingxuan;
+    private int imageHeight = 500; //设置渐变高度，一般为导航图片高度，自己控制
+
 
     @BindView(R.id.choiceness_banner)
     Banner choicenessBanner;
@@ -65,6 +74,8 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
 
     @Override
     void initData(@Nullable Bundle savedInstanceState) {
+
+
         choicenessPresenter = getPresenter();
         choicenessPresenter.shuju();
         //设置banner样式...CIRCLE_INDICATOR_TITLE包含标题
@@ -78,6 +89,32 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
         //设置指示器位置（当banner模式中有指示器时）
         choicenessBanner.setIndicatorGravity(BannerConfig.CENTER);
 
+
+        //查找控件
+//搜索框在布局最上面
+        line.bringToFront();
+//滑动监听
+        scrollView.setScrollViewListener(new ObservableScrollView.ScrollViewListener() {
+            @Override
+            public void onScrollChanged(ObservableScrollView scrollView, int x, int y, int oldx, int oldy) {
+                if (y <= 0) {
+                    line.setBackgroundColor(Color.argb((int) 0, 2, 255, 37));
+                    jingxuan.setTextColor(Color.argb((int) 0, 255, 255, 255));
+                    jingxuan.setText("精选");
+                    //AGB由相关工具获得，或者美工提供
+                } else if (y > 0 && y <= imageHeight) {
+                    float scale = (float) y / imageHeight;
+                    float alpha = (255 * scale);
+// 只是layout背景透明
+                    line.setBackgroundColor(Color.argb((int) alpha, 2, 255, 37));
+                    jingxuan.setTextColor(Color.argb((int) alpha, 255, 255, 255));
+                } else {
+                    line.setBackgroundColor(Color.argb((int) 255, 2, 255, 37));
+                    jingxuan.setTextColor(Color.argb((int) 255, 255, 255, 255));
+                    jingxuan.setText("精选");
+                }
+            }
+        });
 
     }
 
@@ -132,19 +169,19 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
         choicenessRecycler.setNestedScrollingEnabled(false);
 
 
-       choicenessAdapter.setOnItemListner(new OnItemListner() {
-           @Override
-           public void onItemClick(int position) {
-               Intent intent=new Intent(getActivity(), PlayActivity.class);
+        choicenessAdapter.setOnItemListner(new OnItemListner() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(getActivity(), PlayActivity.class);
 //               intent.putExtra("shareURL",beans.get(position).getChildList().get(position).getShareURL());
-                 startActivity(intent);
-           }
+                startActivity(intent);
+            }
 
-           @Override
-           public void onItemLongClick(int position) {
+            @Override
+            public void onItemLongClick(int position) {
 
-           }
-       });
+            }
+        });
 
 
     }
