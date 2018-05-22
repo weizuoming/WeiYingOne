@@ -178,7 +178,9 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
             @Override
             public void onItemClick(int position) {
                 Intent intent = new Intent(getActivity(), PlayActivity.class);
-//               intent.putExtra("shareURL",beans.get(position).getChildList().get(position).getShareURL());
+                intent.putExtra("loadUrl",childList .get(position).getLoadURL().toString());
+                intent.putExtra("shareUrl", childList.get(position).getShareURL().toString());
+                intent.putExtra("slt", childList.get(position).getPic().toString());
                 startActivity(intent);
             }
 

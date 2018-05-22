@@ -51,4 +51,9 @@ dependencies {
     //刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
     implementation 'com.android.support:support-v4:27.1.1'
+    // 视频播放
+    implementation 'com.github.open-android:IjkPlayer:1.0.0'
+    //TabLayout
+    implementation 'com.android.support:design:27.1.1'
+
 }
