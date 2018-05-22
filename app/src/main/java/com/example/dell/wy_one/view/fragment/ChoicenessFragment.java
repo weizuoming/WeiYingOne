@@ -62,18 +62,18 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
     private ChoicenessAdapter choicenessAdapter;
 
     @Override
-    View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
+    protected View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         return inflater.inflate(R.layout.fragment_choiceness, container, false);
     }
 
     @Override
-    void initView(View view) {
+    protected void initView(View view) {
 
     }
 
 
     @Override
-    void initData(@Nullable Bundle savedInstanceState) {
+    protected void initData(@Nullable Bundle savedInstanceState) {
 
 
         choicenessPresenter = getPresenter();
@@ -119,7 +119,7 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
     }
 
     @Override
-    ChoicenessPresenter newPresenter() {
+    protected ChoicenessPresenter newPresenter() {
         return new ChoicenessPresenter();
     }
 

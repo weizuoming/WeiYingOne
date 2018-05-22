@@ -30,10 +30,10 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
          initData(savedInstanceState);
         return view;
     }
-     abstract View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container);
-     abstract void initView(View view);
-    abstract void initData(@Nullable Bundle savedInstanceState);
-    abstract P newPresenter();
+     protected abstract View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container);
+     protected abstract void initView(View view);
+    protected abstract void initData(@Nullable Bundle savedInstanceState);
+    protected abstract P newPresenter();
     public P getPresenter(){
         return p;
     }

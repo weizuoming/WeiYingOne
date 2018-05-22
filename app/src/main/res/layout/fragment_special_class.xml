@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_colorful"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="135pt"
-        android:gravity="center"
+
         android:background="#f34336">
+        <ImageView
+            android:id="@+id/back_special_class"
+            android:layout_width="32pt"
+            android:layout_height="32pt"
+            android:layout_marginTop="53pt"
+            android:layout_marginLeft="26pt"
+            android:background="@mipmap/back"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginTop="53pt"
             android:textSize="32pt"
-            android:text="专题"
+            android:text="热点资讯"
             android:textColor="#fff"/>
     </RelativeLayout>
 
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:id="@+id/smart_refresh2"
+        android:id="@+id/smart_SpecialClass"
         android:layout_marginTop="135pt"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.example.dell.wy_one.view.custom.ObservableScrollView
-            android:id="@+id/scrollView_zhuanti"
+            android:id="@+id/scrollView_SpecialClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_shipin"
+                android:id="@+id/recycler_SpecialClass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

@@ -7,7 +7,7 @@ public class HttpConfig {
     public static final String JINGXUAN="front/homePageApi/homePage.do";
 
     //频道列表
-
+    public static final String ZHUANTI="front/columns/getVideoList.do";
 
 
 }
