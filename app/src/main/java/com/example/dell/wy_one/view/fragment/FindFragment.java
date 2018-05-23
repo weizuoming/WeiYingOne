@@ -13,7 +13,9 @@ import com.example.dell.wy_one.presenter.BasePresenter;
 import com.example.dell.wy_one.presenter.FindPresenter;
 import com.example.dell.wy_one.view.interfaces.FindIView;
 
-
+/*
+* 简介Fragment
+* */
 public class FindFragment extends BaseFragment<FindPresenter> implements FindIView{
 
     @Override

@@ -27,8 +27,7 @@
         <activity
             android:name=".view.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".view.activity.PlayActivity" />
-        <activity android:name=".view.activity.SpecialClassActivity"></activity>
+        <activity android:name=".view.activity.PlayActivity"></activity>
     </application>
 
 </manifest>

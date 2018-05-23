@@ -35,6 +35,28 @@
                     android:layout_height="350pt">
 
                 </com.youth.banner.Banner>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/jingxuan_sousuo"
+                    android:layout_width="500pt"
+                    android:layout_height="76pt"
+                    android:layout_marginTop="70pt"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/sousuo_background">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30pt"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一念天堂"
+                        android:textColor="#C1BFC5"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30pt"/>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tuijian"
