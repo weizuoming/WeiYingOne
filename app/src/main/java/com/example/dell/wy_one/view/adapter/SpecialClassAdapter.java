@@ -1,6 +1,7 @@
 package com.example.dell.wy_one.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.dell.wy_one.R;
 import com.example.dell.wy_one.model.bean.SpecialClassBean;
+import com.example.dell.wy_one.view.activity.PlayActivity;
 import com.example.dell.wy_one.view.holder.SpecialClassHolder;
 import com.example.dell.wy_one.view.interfaces.OnItemListner;
 
@@ -33,7 +35,7 @@ public class SpecialClassAdapter extends RecyclerView.Adapter<SpecialClassHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SpecialClassHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SpecialClassHolder holder, final int position) {
         final SpecialClassBean.RetBean dataBean = specialClassBean
                 .getRet();
         holder.sdv_SpecialClass.setImageURI(dataBean.getList().get(position).getPic());
@@ -41,9 +43,9 @@ public class SpecialClassAdapter extends RecyclerView.Adapter<SpecialClassHolder
         holder.sdv_SpecialClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(context, ShiPinActivity.class);
-//                intent.putExtra("url",dataBean.getList().get(position).getShareURL()+"");
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, PlayActivity.class);
+                intent.putExtra("url",dataBean.getList().get(position).getShareURL()+"");
+                context.startActivity(intent);
             }
         });
     }
