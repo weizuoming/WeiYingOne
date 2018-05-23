@@ -31,6 +31,8 @@
         <activity android:name=".view.activity.SettingActivity" />
         <activity android:name=".view.activity.ShareActivity"></activity>
         <activity android:name=".view.activity.SearchActivity"></activity>
+        <activity android:name=".view.activity.SpecialClassActivity"></activity>
+
     </application>
 
 </manifest>

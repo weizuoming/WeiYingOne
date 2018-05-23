@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="8pt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="#55ffffff"
+        android:layout_marginTop="15pt"
+        android:layout_marginLeft="8pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_shipin"
+            android:layout_width="316pt"
+            android:layout_height="200pt"
+            android:layout_margin="10pt"
+            app:actualImageScaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/text_class"
+            android:layout_width="316pt"
+            android:layout_height="50pt"
+            android:layout_marginTop="160pt"
+            android:layout_marginRight="10pt"
+            android:layout_marginLeft="10pt"
+            android:textColor="#fff"
+            android:textSize="32pt"
+            android:text="大片云集"
+            android:gravity="center"
+            android:background="#26000000"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -19,23 +19,23 @@ import com.example.dell.wy_one.view.interfaces.FindIView;
 public class FindFragment extends BaseFragment<FindPresenter> implements FindIView{
 
     @Override
-    View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
+    protected View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         return inflater.inflate(R.layout.fragment_find, container, false);
     }
 
     @Override
-    void initView(View view) {
+    protected void initView(View view) {
 
     }
 
 
     @Override
-    void initData(@Nullable Bundle savedInstanceState) {
+    protected void initData(@Nullable Bundle savedInstanceState) {
 
     }
 
     @Override
-    FindPresenter newPresenter() {
+    protected FindPresenter newPresenter() {
         return new FindPresenter();
     }
 

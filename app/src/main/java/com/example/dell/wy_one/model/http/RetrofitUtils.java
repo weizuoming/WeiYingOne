@@ -77,8 +77,7 @@ public class RetrofitUtils {
             Log.e("----oldUrl",oldUrl);
             //要添加的公共参数...map
             Map<String,String> map = new HashMap<>();
-            map.put("source","android");
-            map.put("appVersion","100");
+
             if ("GET".equals(method)){
                 StringBuilder stringBuilder = new StringBuilder();//创建一个stringBuilder...字符串缓冲区
                 stringBuilder.append(oldUrl);

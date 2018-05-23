@@ -5,20 +5,11 @@ import android.os.Bundle;
 
 import com.example.dell.wy_one.R;
 
-public class SearchActivity extends BaseActivity {
+public class SearchActivity extends AppCompatActivity {
 
     @Override
-    void initView() {
-
-    }
-
-    @Override
-    void initData() {
-
-    }
-
-    @Override
-    int getLayout() {
-        return R.layout.activity_search;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_search);
     }
 }
