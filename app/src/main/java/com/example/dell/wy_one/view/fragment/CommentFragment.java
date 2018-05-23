@@ -7,20 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.example.dell.wy_one.R;
 import com.example.dell.wy_one.presenter.BasePresenter;
-import com.example.dell.wy_one.presenter.FindPresenter;
-import com.example.dell.wy_one.view.interfaces.FindIView;
+import com.example.dell.wy_one.presenter.CommentPresenter;
 
 /*
-* 简介Fragment
+* 评论Fragmeng
 * */
-public class FindFragment extends BaseFragment<FindPresenter> implements FindIView{
-
+public class CommentFragment extends BaseFragment {
     @Override
     View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
-        return inflater.inflate(R.layout.fragment_find, container, false);
+        return inflater.inflate(R.layout.fragment_summary, container, false);
     }
 
     @Override
@@ -28,24 +25,13 @@ public class FindFragment extends BaseFragment<FindPresenter> implements FindIVi
 
     }
 
-
     @Override
     void initData(@Nullable Bundle savedInstanceState) {
 
     }
 
     @Override
-    FindPresenter newPresenter() {
-        return new FindPresenter();
-    }
-
-    @Override
-    public void onSuccess() {
-
-    }
-
-    @Override
-    public void onError() {
-
+    BasePresenter newPresenter() {
+        return new CommentPresenter();
     }
 }

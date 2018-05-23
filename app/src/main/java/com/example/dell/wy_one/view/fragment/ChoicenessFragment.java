@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ import com.example.dell.wy_one.model.bean.ChoicenessBean;
 import com.example.dell.wy_one.presenter.ChoicenessPresenter;
 import com.example.dell.wy_one.utils.GlideImageLoader;
 import com.example.dell.wy_one.view.activity.PlayActivity;
+import com.example.dell.wy_one.view.activity.SearchActivity;
 import com.example.dell.wy_one.view.adapter.ChoicenessAdapter;
 import com.example.dell.wy_one.view.custom.ObservableScrollView;
 import com.example.dell.wy_one.view.interfaces.ChoicenessIView;
@@ -34,6 +36,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -45,6 +48,8 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
     ObservableScrollView scrollView;
     @BindView(R.id.jingxuan)
     TextView jingxuan;
+    @BindView(R.id.jingxuan_sousuo)
+    LinearLayout jingxuanSousuo;
     private int imageHeight = 500; //设置渐变高度，一般为导航图片高度，自己控制
 
 
@@ -173,7 +178,9 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
             @Override
             public void onItemClick(int position) {
                 Intent intent = new Intent(getActivity(), PlayActivity.class);
-//               intent.putExtra("shareURL",beans.get(position).getChildList().get(position).getShareURL());
+                intent.putExtra("loadUrl",childList .get(position).getLoadURL().toString());
+                intent.putExtra("shareUrl", childList.get(position).getShareURL().toString());
+                intent.putExtra("slt", childList.get(position).getPic().toString());
                 startActivity(intent);
             }
 
@@ -205,5 +212,11 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         unbinder1 = ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @OnClick(R.id.jingxuan_sousuo)
+    public void onViewClicked() {
+        Intent intent=new Intent(getActivity(), SearchActivity.class);
+        startActivity(intent);
     }
 }

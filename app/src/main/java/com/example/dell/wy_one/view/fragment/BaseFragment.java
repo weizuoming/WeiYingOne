@@ -31,7 +31,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
         return view;
     }
      abstract View getLayout(@NonNull LayoutInflater inflater, @Nullable ViewGroup container);
-     abstract void initView(View view);
+    abstract void initView(View view);
     abstract void initData(@Nullable Bundle savedInstanceState);
     abstract P newPresenter();
     public P getPresenter(){
