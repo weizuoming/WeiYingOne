@@ -1,6 +1,7 @@
 package com.example.dell.wy_one.model.interfaces;
 
 import com.example.dell.wy_one.model.bean.ChoicenessBean;
+import com.example.dell.wy_one.model.bean.CommentBean;
 import com.example.dell.wy_one.model.bean.SpecialClassBean;
 
 import java.util.Map;
@@ -19,6 +20,10 @@ public interface MyService {
     @FormUrlEncoded
     @POST("{url}")
     Observable<SpecialClassBean>  getSpeciali(@Path(value = "url",encoded = true) String url, @FieldMap Map<String,String> map);
+
+    @FormUrlEncoded
+    @POST("{url}")
+    Observable<CommentBean> getComment(@Path(value = "url",encoded = true) String url,@FieldMap Map<String,String> map);
 
 
 }
