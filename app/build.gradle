@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.dell.wy_one"
-        minSdkVersion 23
+        minSdkVersion 22
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -16,6 +16,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+        splits {
+            abi {
+                enable true
+                reset()
+                include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+                universalApk false
+            }
+        }
+
 }
 
 dependencies {
@@ -47,7 +57,7 @@ dependencies {
     //banner
     implementation 'com.youth.banner:banner:1.4.9'
     //recyclerview的依赖
-    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.'
     //刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
     implementation 'com.android.support:support-v4:27.1.1'
@@ -55,5 +65,5 @@ dependencies {
     implementation 'com.github.open-android:IjkPlayer:1.0.0'
     //TabLayout
     implementation 'com.android.support:design:27.1.1'
-
+    implementation files('libs/MobCommons-2018.0418.1102.jar')
 }

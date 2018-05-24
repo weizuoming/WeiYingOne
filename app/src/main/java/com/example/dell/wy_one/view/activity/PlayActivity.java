@@ -9,10 +9,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.text.TextUtils;
 import android.view.KeyEvent;
-import android.view.View;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.dl7.player.media.IjkPlayerView;
 import com.example.dell.wy_one.R;
 import com.example.dell.wy_one.view.fragment.CommentFragment;
@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.http.Url;
 
 public class PlayActivity extends BaseActivity {
 
@@ -34,10 +33,14 @@ public class PlayActivity extends BaseActivity {
     ViewPager videoViewpager;
     ArrayList<Fragment> fragmentList02 = new ArrayList<Fragment>();
     ArrayList<String> titleList02 = new ArrayList<String>();
+    @BindView(R.id.play_title)
+    TextView playTitle;
     private String shareUrl;
     private String loadUrl;
     private String slt;
     private Uri mUri;
+    private String title;
+
     @Override
     void initView() {
         //获取信息
@@ -45,22 +48,23 @@ public class PlayActivity extends BaseActivity {
         loadUrl = intent.getStringExtra("loadUrl");
         shareUrl = intent.getStringExtra("shareUrl");
         slt = intent.getStringExtra("slt");
-        if(!TextUtils.isEmpty(shareUrl) && !TextUtils.isEmpty(loadUrl)){
-            initIJK();
-        }
-        return;
-    }
-    /**
-     * 设置IJK播放器
-     */
-    private void initIJK() {
-        mUri = Uri.parse(shareUrl);
+        title = intent.getStringExtra("title");
+        playTitle.setText(title);
+
+        //缩列图
+        Glide.with(this).load(slt).into(playIjkplayer.mPlayerThumb);
+        /**
+         * 设置IJK播放器
+         */
+        mUri = Uri.parse("http://covertness.qiniudn" + ".com/android_zaixianyingyinbofangqi_test_baseline.mp4");
         playIjkplayer.init()
                 .setVideoPath(mUri)
                 .setMediaQuality(IjkPlayerView.MEDIA_QUALITY_HIGH)
                 .enableDanmaku()
                 .start();
+
     }
+
 
     @Override
     void initData() {
@@ -76,6 +80,7 @@ public class PlayActivity extends BaseActivity {
         playTab.setupWithViewPager(videoViewpager);
 
     }
+
     private class PlayMyAdapter extends FragmentPagerAdapter {
         public PlayMyAdapter(FragmentManager fm, PlayActivity playActivity, ArrayList<Fragment> fragmentList02, ArrayList<String> titleList02) {
             super(fm);
@@ -104,12 +109,6 @@ public class PlayActivity extends BaseActivity {
         return R.layout.activity_play;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -150,6 +149,13 @@ public class PlayActivity extends BaseActivity {
         super.onBackPressed();
     }
 
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 
 
 }

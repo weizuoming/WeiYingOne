@@ -181,6 +181,7 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
                 intent.putExtra("loadUrl",childList .get(position).getLoadURL().toString());
                 intent.putExtra("shareUrl", childList.get(position).getShareURL().toString());
                 intent.putExtra("slt", childList.get(position).getPic().toString());
+                intent.putExtra("title",childList.get(position).getTitle().toString());
                 startActivity(intent);
             }
 
@@ -202,7 +203,7 @@ public class ChoicenessFragment extends BaseFragment<ChoicenessPresenter> implem
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        unbinder.unbind();
+
     }
 
 

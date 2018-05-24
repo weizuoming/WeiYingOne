@@ -9,5 +9,9 @@ public class HttpConfig {
     //频道列表
     public static final String ZHUANTI="front/columns/getVideoList.do";
 
+    //评论
+    public static final String PINGLUN="front/Commentary/getCommentList.do";
+
+
 
 }

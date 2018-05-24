@@ -11,48 +11,48 @@
     <RelativeLayout
         android:id="@+id/drawer_relative"
         android:layout_gravity="start"
-        android:layout_width="@dimen/x276"
+        android:layout_width="552pt"
         android:layout_height="match_parent">
 
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/sdv_2"
-            android:layout_width="@dimen/x80"
-            android:layout_height="@dimen/y80"
-            android:layout_marginTop="@dimen/y55"
-            android:layout_marginLeft="@dimen/x24"
+            android:layout_width="160pt"
+            android:layout_height="160pt"
+            android:layout_marginTop="110pt"
+            android:layout_marginLeft="48pt"
             app:actualImageScaleType="centerCrop"
             app:roundAsCircle="true"/>
         <TextView
             android:id="@+id/textWei"
-            android:layout_marginTop="@dimen/y19"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="38pt"
+            android:layout_marginLeft="70pt"
             android:layout_below="@id/sdv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/x16"
+            android:textSize="32pt"
             android:textColor="#fff"
             android:text="微影，微一下吧"/>
 
         <RelativeLayout
             android:id="@+id/relative_shoucang"
             android:layout_below="@id/textWei"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_shoucang"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_collections_bookmark_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_shoucang"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="我的收藏"/>
         </RelativeLayout>
@@ -60,22 +60,22 @@
         <RelativeLayout
             android:id="@+id/relative_xiazai"
             android:layout_below="@id/relative_shoucang"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_xiazai"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_play_for_work_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_xiazai"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="我的下载"/>
         </RelativeLayout>
@@ -83,22 +83,22 @@
         <RelativeLayout
             android:id="@+id/relative_fuli"
             android:layout_below="@id/relative_xiazai"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_fuli"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_insert_emoticon_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_fuli"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="福利"/>
         </RelativeLayout>
@@ -106,22 +106,22 @@
         <RelativeLayout
             android:id="@+id/relative_fenxiang"
             android:layout_below="@id/relative_fuli"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_fenxiang"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_share_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_fenxiang"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="分享"/>
         </RelativeLayout>
@@ -129,22 +129,22 @@
         <RelativeLayout
             android:id="@+id/relative_jianyi"
             android:layout_below="@id/relative_fenxiang"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_jianyi"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_android_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_jianyi"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="建议反馈"/>
         </RelativeLayout>
@@ -152,22 +152,22 @@
         <RelativeLayout
             android:id="@+id/relative_shezhi"
             android:layout_below="@id/relative_jianyi"
-            android:layout_marginTop="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginTop="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/image_shezhi"
-                android:layout_width="@dimen/x25"
-                android:layout_height="@dimen/y25"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_settings_black_24dp"/>
             <TextView
                 android:layout_toRightOf="@id/image_shezhi"
-                android:layout_marginLeft="@dimen/x11"
+                android:layout_marginLeft="22pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/x16"
+                android:textSize="32pt"
                 android:textColor="#fff"
                 android:text="设置"/>
         </RelativeLayout>
@@ -175,8 +175,8 @@
         <RelativeLayout
             android:id="@+id/guanyu_zhuti"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/y27"
-            android:layout_marginLeft="@dimen/x35"
+            android:layout_marginBottom="54pt"
+            android:layout_marginLeft="70pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RelativeLayout
@@ -185,16 +185,16 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/image_guanyu"
-                    android:layout_width="@dimen/x25"
-                    android:layout_height="@dimen/y25"
+                    android:layout_width="50pt"
+                    android:layout_height="50pt"
                     android:layout_centerVertical="true"
                     android:background="@drawable/ic_person_black_24dp"/>
                 <TextView
                     android:layout_toRightOf="@id/image_guanyu"
-                    android:layout_marginLeft="@dimen/x11"
+                    android:layout_marginLeft="22pt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/x16"
+                    android:textSize="32pt"
                     android:textColor="#fff"
                     android:text="关于"/>
             </RelativeLayout>
@@ -202,21 +202,21 @@
             <RelativeLayout
                 android:id="@+id/relative_zhuti"
                 android:layout_toRightOf="@+id/relative_guanyu"
-                android:layout_marginLeft="@dimen/x40"
+                android:layout_marginLeft="80pt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/image_zhuti"
-                    android:layout_width="@dimen/x25"
-                    android:layout_height="@dimen/y25"
+                    android:layout_width="50pt"
+                    android:layout_height="50pt"
                     android:layout_centerVertical="true"
                     android:background="@drawable/ic_palette_black_24dp"/>
                 <TextView
                     android:layout_toRightOf="@id/image_zhuti"
-                    android:layout_marginLeft="@dimen/x11"
+                    android:layout_marginLeft="22pt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/x16"
+                    android:textSize="32pt"
                     android:textColor="#fff"
                     android:text="主题"/>
             </RelativeLayout>
@@ -239,7 +239,7 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/bottom_bg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/y65"
+            android:layout_height="130pt"
             android:id="@+id/rg"
             android:orientation="horizontal">
             <RadioButton
@@ -249,46 +249,46 @@
                 android:layout_weight="1"
                 android:text="精选"
                 android:gravity="center"
-                android:textSize="@dimen/y10"
+                android:textSize="20pt"
                 android:button="@null"
                 android:layout_height="match_parent"
-                android:padding="@dimen/y10"
+                android:padding="20pt"
                 android:drawableTop="@drawable/jingxuan_selected"/>
             <RadioButton
                 android:textColor="@drawable/jingxuan_text"
                 android:id="@+id/zhuanti"
                 android:gravity="center"
-                android:textSize="@dimen/y10"
+                android:textSize="20pt"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="专题"
                 android:button="@null"
                 android:layout_height="match_parent"
-                android:padding="@dimen/y10"
+                android:padding="20pt"
                 android:drawableTop="@drawable/zhuanti_selected"/>
             <RadioButton
                 android:textColor="@drawable/jingxuan_text"
                 android:id="@+id/faxian"
                 android:gravity="center"
-                android:textSize="@dimen/y10"
+                android:textSize="20pt"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="发现"
                 android:button="@null"
                 android:layout_height="match_parent"
-                android:padding="@dimen/y10"
+                android:padding="20pt"
                 android:drawableTop="@drawable/faxian_selected"/>
             <RadioButton
                 android:textColor="@drawable/jingxuan_text"
                 android:id="@+id/wode"
                 android:gravity="center"
-                android:textSize="@dimen/x10"
+                android:textSize="20pt"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="我的"
                 android:button="@null"
                 android:layout_height="match_parent"
-                android:padding="@dimen/y10"
+                android:padding="20pt"
                 android:drawableTop="@drawable/wode_selected"/>
         </RadioGroup>
     </RelativeLayout>

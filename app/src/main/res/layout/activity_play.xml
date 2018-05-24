@@ -2,28 +2,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/bg_colorful"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.activity.PlayActivity">
+    <RelativeLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:background="#ff3421"
+        android:layout_height="135pt">
+        <TextView
+            android:id="@+id/play_title"
+            android:layout_width="match_parent"
+            android:layout_height="82pt"
+            android:textSize="32pt"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:layout_alignParentBottom="true"
+
+            />
+    </RelativeLayout>
+
 
     <com.dl7.player.media.IjkPlayerView
-        android:layout_width="match_parent"
-        android:layout_height="320pt"
+        android:layout_below="@id/line"
         android:id="@+id/play_ijkplayer"
-        ></com.dl7.player.media.IjkPlayerView>
-    <android.support.design.widget.TabLayout
-        android:layout_below="@id/play_ijkplayer"
-        android:id="@+id/play_tab"
-        app:tabIndicatorColor="#f00"
-        app:tabSelectedTextColor="#f00"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
+        android:layout_height="420pt"></com.dl7.player.media.IjkPlayerView>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/play_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_ijkplayer"
+        app:tabIndicatorColor="#f00"
+        app:tabSelectedTextColor="#f00"></android.support.design.widget.TabLayout>
+
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/play_tab"
         android:id="@+id/video_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        ></android.support.v4.view.ViewPager>
-    
+        android:layout_below="@id/play_tab"></android.support.v4.view.ViewPager>
+
 
 </RelativeLayout>
