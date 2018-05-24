@@ -1,19 +1,13 @@
 package com.example.dell.wy_one.view.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
 import com.example.dell.wy_one.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class WelcomeActivity extends BaseActivity {
 
@@ -28,7 +22,7 @@ public class WelcomeActivity extends BaseActivity {
     @Override
     void initData() {
         int[]arr={1,2,3,4,5,6,7};
-        int index= (int) (Math.random()*arr.length);
+        int index= (int) (Math.random()*arr.length-1);
         int rand=arr[index];
         List<Integer> integers=new ArrayList<>();
         integers.add(R.drawable.a);
@@ -39,8 +33,8 @@ public class WelcomeActivity extends BaseActivity {
         integers.add(R.drawable.f);
         integers.add(R.drawable.g);
 
-        img.setImageResource(integers.get(rand));
-
+        //img.setImageResource(integers.get(rand));
+        img.setBackgroundResource(integers.get(rand));
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.welcome);
         img.startAnimation(animation);
 

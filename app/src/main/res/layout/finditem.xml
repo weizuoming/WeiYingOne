@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#958D80">
+    <TextView
+        android:id="@+id/find_title"
+        android:layout_width="match_parent"
+        android:layout_height="86pt"
+        android:textColor="#fff"
+        android:text="太阳之门"
+        android:textSize="32pt"
+        android:gravity="center"/>
+    <ImageView
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/item_img"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop" />
+    <TextView
+        android:textColor="#fff"
+        android:id="@+id/find_show"
+        android:layout_width="match_parent"
+        android:layout_height="300pt"
+        android:textSize="27pt"
+        android:layout_margin="10pt"/>
+
+</LinearLayout>
