@@ -65,5 +65,5 @@ dependencies {
     implementation 'com.github.open-android:IjkPlayer:1.0.0'
     //TabLayout
     implementation 'com.android.support:design:27.1.1'
-
+    implementation files('libs/MobCommons-2018.0418.1102.jar')
 }

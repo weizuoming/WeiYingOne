@@ -5,9 +5,10 @@ import android.app.Application;
 
 import com.example.dell.wy_one.view.custom.DensityHelper;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.mob.MobApplication;
 
 //initialize初始化
-public class InitializeApp extends Application{
+public class InitializeApp extends MobApplication{
     private float DESIGN_WIDTH = 720;
     @Override
     public void onCreate() {
