@@ -15,7 +15,6 @@ import com.example.dell.wy_one.model.bean.ChoicenessBean;
 import com.example.dell.wy_one.presenter.SpecialPresenter;
 import com.example.dell.wy_one.view.adapter.SpecialAdapter;
 import com.example.dell.wy_one.view.custom.ObservableScrollView;
-import com.example.dell.wy_one.view.interfaces.OnItemListner;
 import com.example.dell.wy_one.view.interfaces.SpecialIView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -116,19 +115,7 @@ public class SpecialFragment extends BaseFragment<SpecialPresenter> implements S
         recyclerShipin.setNestedScrollingEnabled(false);
 
 
-        specialAdapter.setOnItemListner(new OnItemListner() {
-            @Override
-            public void onItemClick(int position) {
-//                Intent intent = new Intent(getActivity(), SpecialClassActivity.class);
-////               intent.putExtra("shareURL",beans.get(position).getChildList().get(position).getShareURL());
-//                startActivity(intent);
-            }
 
-            @Override
-            public void onItemLongClick(int position) {
-
-            }
-        });
 
 
     }

@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/bg_colorful"
-    >
+    android:background="@mipmap/bg_search">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="135pt"
-
-        android:background="#f34336">
+        android:gravity="center"
+        android:background="#0581d7">
         <ImageView
-
-            android:id="@+id/back_special_class"
+            android:id="@+id/back_welfare"
             android:layout_width="wrap_content"
             android:layout_height="32pt"
             android:padding="13pt"
@@ -25,24 +22,25 @@
             android:gravity="center"
             android:layout_marginTop="53pt"
             android:textSize="32pt"
-            android:text="热点资讯"
+            android:text="福利"
             android:textColor="#fff"/>
     </RelativeLayout>
 
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
-        android:id="@+id/smart_SpecialClass"
+        android:id="@+id/welfare_refresh"
         android:layout_marginTop="135pt"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <com.example.dell.wy_one.view.custom.ObservableScrollView
-            android:id="@+id/scrollView_SpecialClass"
+            android:id="@+id/scrollView_welfare"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_SpecialClass"
+                android:id="@+id/recycler_welfare"
+                android:layout_marginTop="12pt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

@@ -67,7 +67,6 @@ public class SpecialAdapter extends RecyclerView.Adapter<SpecialHolder> {
     public void setOnItemListner(OnItemListner onItemListner) {
         this.onItemListner = onItemListner;
 //        Intent intent = new Intent(context, SpecialClassActivity.class);
-//
 //        context.startActivity(intent);
     }
 

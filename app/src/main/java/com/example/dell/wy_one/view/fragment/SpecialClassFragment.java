@@ -55,9 +55,7 @@ public class SpecialClassFragment extends BaseFragment<SpecialClassPresenter> im
         backSpecialClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), SpecialClassActivity.class);
-//                startActivity(intent);
-                onDestroy();
+                getActivity().finish();
             }
         });
     }

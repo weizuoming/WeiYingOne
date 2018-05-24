@@ -27,7 +27,10 @@
         <activity
             android:name=".view.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".view.activity.PlayActivity"></activity>
+        <activity android:name=".view.activity.PlayActivity" />
+        <activity android:name=".view.activity.SearchActivity" />
+        <activity android:name=".view.activity.SpecialClassActivity" />
+        <activity android:name=".view.activity.WelfareActivity"></activity>
     </application>
 
 </manifest>

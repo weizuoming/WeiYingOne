@@ -1,11 +1,8 @@
 package com.example.dell.wy_one.view.activity;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -108,6 +105,8 @@ public class MainActivity extends BaseActivity {
                 //福利
             case R.id.relative_fuli:
 
+                startActivity(new Intent(MainActivity.this
+                        , WelfareActivity.class));
                 break;
             case R.id.relative_fenxiang:
 
