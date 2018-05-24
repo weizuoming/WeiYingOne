@@ -110,13 +110,18 @@ public class MainActivity extends BaseActivity {
 
                 break;
             case R.id.relative_fenxiang:
+                //share  分享
+                Intent intent2 = new Intent(MainActivity.this, ShareActivity.class);
+                startActivity(intent2);
 
                 break;
             case R.id.relative_jianyi:
 
                 break;
             case R.id.relative_shezhi:
-
+                Intent intent1 = new Intent(MainActivity.this
+                        , SettingActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.relative_guanyu:
 

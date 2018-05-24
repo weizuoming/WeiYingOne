@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff2"
+    android:background="@mipmap/bg_colorful"
     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <com.example.dell.wy_one.view.custom.StretchyTextView
+            android:id="@+id/summary_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.example.dell.wy_one.view.custom.StretchyTextView>
+   
 
-</LinearLayout>
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/zhankai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:text="展开"
+        android:textSize="20dp"
+        />
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_marginTop="10pt"
+       android:layout_below="@id/zhankai"
+       android:id="@+id/summary_recycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
