@@ -66,5 +66,9 @@ dependencies {
     //TabLayout
     implementation 'com.android.support:design:27.1.1'
     implementation files('libs/MobCommons-2018.0418.1102.jar')
+    //发现效果依赖
+    implementation 'link.fls:swipestack:0.3.0'
+    //缓存条
+    implementation 'com.steelkiwi:dots-loader-view:1.0.0'
 
 }

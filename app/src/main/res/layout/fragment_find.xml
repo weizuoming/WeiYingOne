@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false">
 
-    <TextView
+    <steelkiwi.com.library.DotsLoaderView
+        android:id="@+id/dotsLoaderView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="发现"/>
+        android:visibility="visible"
+        app:dlv_item_drawable="@drawable/circle_background"
+        app:dlv_line_color="@color/point_color"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="53pt"
+            android:background="#F54337"/>
 
-</LinearLayout>
+        <TextView
+            android:textSize="32pt"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="82pt"
+            android:text="发现"
+            android:textColor="#fff"
+            android:background="#F54337"/>
+
+        <link.fls.swipestack.SwipeStack
+            android:layout_marginTop="66pt"
+            android:id="@+id/my_swipte_stack"
+            android:layout_width="match_parent"
+            android:layout_height="773pt"
+            android:layout_gravity="center_horizontal"
+            app:animation_duration="300"
+            app:stack_rotation="0"
+            app:stack_size="3"
+            app:swipe_rotation="15"/>
+        <Button
+            android:id="@+id/btn"
+            android:layout_marginTop="60pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="换一批"
+            android:background="#47C200"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
