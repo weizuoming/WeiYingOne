@@ -3,7 +3,6 @@ package com.example.dell.wy_one.presenter;
 import com.example.dell.wy_one.model.bean.ChoicenessBean;
 import com.example.dell.wy_one.model.http.HttpConfig;
 import com.example.dell.wy_one.model.http.RetrofitUtils;
-import com.example.dell.wy_one.view.interfaces.ChoicenessIView;
 import com.example.dell.wy_one.view.interfaces.FindIView;
 
 import java.util.HashMap;
