@@ -66,4 +66,5 @@ dependencies {
     //TabLayout
     implementation 'com.android.support:design:27.1.1'
     implementation files('libs/MobCommons-2018.0418.1102.jar')
+
 }

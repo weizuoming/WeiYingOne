@@ -45,6 +45,7 @@ public class SpecialClassAdapter extends RecyclerView.Adapter<SpecialClassHolder
             public void onClick(View v) {
                 Intent intent = new Intent(context, PlayActivity.class);
                 intent.putExtra("url",dataBean.getList().get(position).getShareURL()+"");
+                intent.putExtra("title",dataBean.getList().get(position).getTitle()+"");
                 context.startActivity(intent);
             }
         });

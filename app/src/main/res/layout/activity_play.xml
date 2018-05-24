@@ -19,7 +19,6 @@
             android:gravity="center"
             android:textColor="#ffffffff"
             android:layout_alignParentBottom="true"
-
             />
     </RelativeLayout>
 
